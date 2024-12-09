@@ -28,6 +28,17 @@ width: 50%;
 justify-content: center;
 
 }
+#item-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #clear-item {
     display: flex;
@@ -38,7 +49,6 @@ justify-content: center;
 }
 .title {
     color: black;
-    font-size: 50px;
     text-align: center;
 }
 
