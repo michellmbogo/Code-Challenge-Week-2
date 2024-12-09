@@ -11,7 +11,7 @@ document.querySelector("#add-button").addEventListener("click", (e) => {
     let quantity = document.getElementById("quantity").value;
 
     // Preven duplicates
-    const itemExists = itemsList.find((_item) => _item.name === itemName);
+    const itemExists = itemsList.find((_item) => _item.itemName === itemName);
 
     if(itemExists){
         alert("This item exists");
@@ -64,6 +64,7 @@ document.querySelector("#clear-button").addEventListener("click", (e) => {
 
 // Mark item as purchased
 function markAsPurchased(itemName) {
+    
     const itemEl = itemName;
     const name = itemEl.id;
 

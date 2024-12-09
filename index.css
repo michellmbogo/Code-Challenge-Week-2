@@ -27,6 +27,7 @@ row-gap: 20px;
 width: 50%;
 justify-content: center;
 
+
 }
 #item-name {
     display: flex;
@@ -110,6 +111,7 @@ flex-direction: row;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+    height: 50px;
   }
 
   .form-group .switch {
