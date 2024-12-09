@@ -8,6 +8,12 @@ The Shopping List Website is a user-friendly platform designed to help users eff
 -Marks Items as purchased
 -edits items
 ## Installation
-**Clone the repository**
+1. **Clone the repository**
 ~~~bash
-git clone
+git clone git@github.com:michellmbogo/Code-Challenge-Week-2.git
+~~~
+2. **Navigate to the project directory**
+~~bash
+cd code-Challenge-week-2
+~~~
+3. Open index.html in your web browser
