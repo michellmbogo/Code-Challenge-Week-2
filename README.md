@@ -19,7 +19,37 @@ The Shopping List Website is a user-friendly platform designed to help users eff
 git clone git@github.com:michellmbogo/Code-Challenge-Week-2.git
 ~~~
 2. **Navigate to the project directory**
-~~bash
+~~~bash
 cd code-Challenge-week-2
 ~~~
 3. Open index.html in your web browser
+
+## Contributing
+Contributions are welcomed please follow the following steps:
+
+1. **Fork the repository**
+2. **Create a new branch**
+   ~~~bash
+   git checkout -b feature/yourFeature
+   ~~~
+3. **Commit your Changes**
+   ~~~bash
+   git commit -m "Add a new feature"
+   ~~~
+4. ** push to the branch**
+  ~~~bash
+   git push origin feature/YourFeatue
+   ~~~
+5. **Open a pull request**
+
+## License
+
+Distributed under the MIT license
+
+## Contact
+
+Name : Michell mbogo
+Email. michellwambui.m@gmail.com
+Project Link : 
+
+   
