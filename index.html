@@ -50,7 +50,7 @@
 
                 <div id="popup" class="modal">
                     <div class="modal-content">
-                      <span class="close" id="closePopup">&times;</span>
+                      <span class="close" id="closePopup" onclick="hidePopup()">&times;</span>
                       <h3>Add Item</h3>
                       <form id="itemForm">
                         <div class="form-group">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group switch">
                           <label for="purchased">Purchased:</label>
-                          <input type="checkbox" id="purchased" name="purchased">
+                          <input type="checkbox" id="edit_purchased" name="purchased"  />
                         </div>
                         <button type="submit" class="save-btn">Save</button>
                       </form>
