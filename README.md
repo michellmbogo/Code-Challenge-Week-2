@@ -52,6 +52,6 @@ Name : Michell mbogo
 
 Email. michellwambui.m@gmail.com
 
-Project Link : 
+Project Link : https://github.com/michellmbogo/Code-Challenge-Week-2
 
    
