@@ -3,6 +3,7 @@
 // And add them to your list
 
 var itemsList = [];
+var itemToEdit = null;
 
 document.querySelector("#add-button").addEventListener("click",(e)=>{
     e.preventDefault()
@@ -30,7 +31,7 @@ const childSection = `
         <p style="display:none" id=${item.itemName}_purchased>Purchased</p>
         <section id="item1_buttons">
             <button  onclick="markAsPurchased(${itemName})">Mark as purchased</button>
-            <button id="openPopup" onclick"showPopUp()">Edit</button>
+            <button  onclick="showPopup(${itemName})">Edit</button>
         </section>
     </section>
 `;
@@ -81,8 +82,23 @@ purchasedParagraph.style.display = "block"
   const closePopup = document.getElementById("closePopup");
 
   // Open the popup
-function showPopup(){
+function showPopup(itemName){
+    const itemEl = itemName;
+    const name = itemEl.id;
+    
+    console.log(itemsList)
+    // Find the item with this name from the array
+    let itemObject = itemsList.find((_item)=> _item.itemName === name);
+    // itemToEdit = item;
+
+// Set the inputs values
+const editItemName = document.getElementById("edit_itemName")
+editItemName.value = itemObject.itemName;
+
+
+
    const popup = document.getElementById("popup");
+   console.log(popup)
     popup.style.display = "flex";
 }
 
