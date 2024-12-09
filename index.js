@@ -30,7 +30,7 @@ const childSection = `
         <p style="display:none" id=${item.itemName}_purchased>Purchased</p>
         <section id="item1_buttons">
             <button  onclick="markAsPurchased(${itemName})">Mark as purchased</button>
-            <button type="submit">Edit</button>
+            <button id="openPopup" >Edit</button>
         </section>
     </section>
 `;
