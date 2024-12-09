@@ -38,6 +38,11 @@ justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+#clear-button {
+row-gap: 20px;
+width: 50%;
+margin-top: 100px;
+}
 
 
 #clear-item {
