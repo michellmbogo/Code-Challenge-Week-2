@@ -1,6 +1,4 @@
-// 1. Add event listener to submit button
-// On press, get the text typed by user in both name and quantity inputs
-// And add them to your list
+
 
 var itemsList = [];
 var itemToEditIndex = null;
@@ -11,6 +9,14 @@ document.querySelector("#add-button").addEventListener("click", (e) => {
     //Get user input
     let itemName = document.getElementById("name").value;
     let quantity = document.getElementById("quantity").value;
+
+    // Preven duplicates
+    const itemExists = itemsList.find((_item) => _item.name === itemName);
+
+    if(itemExists){
+        alert("This item exists");
+        return
+    }
 
     // Create an item object 
     let item = {
@@ -28,7 +34,7 @@ document.querySelector("#add-button").addEventListener("click", (e) => {
     <section id=${item.itemName}>
         <p id=itemNameP${itemName}>Item name : ${item.itemName}</p>
         <p id=itemQuantityP${itemName}>Quantity : ${item.quantity}</p>
-        <p style="display:none" id=itemPurchasedP${item.itemName}_purchased>Purchased</p>
+        <p style="display:none" id="itemPurchasedP${item.itemName}">Purchased</p>
         <section id="item1_buttons">
             <button  onclick="markAsPurchased(${itemName})">Mark as purchased</button>
             <button  onclick="showPopup(${itemName})">Edit</button>
@@ -69,7 +75,7 @@ function markAsPurchased(itemName) {
     itemsList[itemIndex].purchased = true;
 
     //Show the purchased text
-    const purchasedTextId = `${name}_purchased`
+    const purchasedTextId = `itemPurchasedP${name}`
     const purchasedParagraph = document.getElementById(purchasedTextId);
     purchasedParagraph.style.display = "block"
 }
@@ -136,14 +142,11 @@ form.addEventListener("submit", (event) => {
    const itemNameP = document.getElementById(`itemNameP${itemToEdit.itemName}`);
    itemNameP.innerHTML = `Item name : ${itemName}`;
 
-   const itemQuantityP = document.getElementById(`itemQuantityP${itemToEdit.itemQuantity}`);
-   itemQuantityP.innerHTML = `Item quantity : ${itemQuantity}`;
+   const itemQuantityP = document.getElementById(`itemQuantityP${itemToEdit.itemName}`);
+   itemQuantityP.innerHTML = `Item quantity : ${quantity}`;
 
-   const itemPurchasedP = document.getElementById(`itemPurchasedP${itemToEdit.itemPurchased}`);
-   itemPurchasedP.innerHTML = `Item purchased : ${itemPurchased}`;
-
-
-
+   const itemPurchasedP = document.getElementById(`itemPurchasedP${itemToEdit.itemName}`);
+   itemPurchasedP.innerHTML = `${purchased ? 'Purschased' : ''}`;
 
 
     // Close the popup after saving
