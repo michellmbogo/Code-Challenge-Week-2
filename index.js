@@ -75,3 +75,40 @@ purchasedParagraph.style.display = "block"
 
     // Find the html child and show purchased indicator
 }
+
+
+const popup = document.getElementById("popup");
+  const openPopup = document.getElementById("openPopup");
+  const closePopup = document.getElementById("closePopup");
+
+  // Open the popup
+  openPopup.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+
+  // Close the popup
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Close the popup when clicking outside of it
+  window.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+
+  // Handle form submission
+  const form = document.getElementById("itemForm");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+    const itemName = document.getElementById("itemName").value;
+    const quantity = document.getElementById("quantity").value;
+    const purchased = document.getElementById("purchased").checked;
+
+    console.log({ itemName, quantity, purchased });
+
+    // Close the popup after saving
+    popup.style.display = "none";
+    form.reset(); // Clear form fields
+  });
