@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shopping List</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <header>
+            <nav id ="nav-title">
+                <div>
+                    <img
+                    src="./images/white_shopping_cart.jpg"
+                    class="nav-image"
+                    />
+                   </div>
+                <h1>Shopping List</h1>
+              
+            </nav>
+        </header>
+        <main>
+            <section id="item-name">
+             <h2 class="title">Add item</h2>
+            <form id="items_form">
+
+                <input
+                type="text"
+                name="item"
+                id="name"
+                placeholder="Enter Item Name"
+                />
+                <input
+                type="number"
+                name="quantity"
+                id="quantity"
+                placeholder="Qty"
+                />
+                <button type="submit" id="add-button">Add</button>
+            </form>
+            </section>
+
+            <section id="items">
+                <section id="clear-item">
+                <h2 class="title">Items</h2>
+                <button type="Submit" id="clear-button" >Clear list</button>
+                </section>
+                
+
+                <section id="items-container">
+
+                </section>
+
+            </section>
+            <section>
+                <div id="popup" class="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closePopup">&times;</span>
+                      <h3>Add Item</h3>
+                      <form id="itemForm">
+                        <div class="form-group">
+                          <label for="itemName">Item Name:</label>
+                          <input type="text" id="itemName" name="itemName" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="quantity">Quantity:</label>
+                          <input type="number" id="quantity" name="quantity" required>
+                        </div>
+                        <div class="form-group switch">
+                          <label for="purchased">Purchased:</label>
+                          <input type="checkbox" id="purchased" name="purchased">
+                        </div>
+                        <button type="submit" class="save-btn">Save</button>
+                      </form>
+                    </div>
+                  </div>
+            </section>
+
+
+        </main>
+        <footer>
+            <p>&copy; 2024 by Michell Mbogo. All rights reserved</p>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+
+
+</html>
