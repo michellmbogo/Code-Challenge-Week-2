@@ -111,7 +111,7 @@ flex-direction: row;
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    height: 50px;
+
   }
 
   .form-group .switch {
@@ -142,4 +142,12 @@ flex-direction: row;
     position: absolute;
     width: 98%;
     bottom: 0%;
+}
+#add-button {
+    background-color: black;
+    height: 40px;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
 }
