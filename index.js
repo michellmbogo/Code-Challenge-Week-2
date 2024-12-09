@@ -37,6 +37,9 @@ const childSection = `
 // Add the child section to the parent container
 itemsContainer.insertAdjacentHTML('beforeend', childSection);
 
+// Clear the form
+const form = document.getElementById("items_form");
+form.reset();
 });
 
 
