@@ -136,7 +136,14 @@ form.addEventListener("submit", (event) => {
    const itemNameP = document.getElementById(`itemNameP${itemToEdit.itemName}`);
    itemNameP.innerHTML = `Item name : ${itemName}`;
 
-   
+   const itemQuantityP = document.getElementById(`itemQuantityP${itemToEdit.itemQuantity}`);
+   itemQuantityP.innerHTML = `Item quantity : ${itemQuantity}`;
+
+   const itemPurchasedP = document.getElementById(`itemPurchasedP${itemToEdit.itemPurchased}`);
+   itemPurchasedP.innerHTML = `Item purchased : ${itemPurchased}`;
+
+
+
 
 
     // Close the popup after saving
