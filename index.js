@@ -30,7 +30,7 @@ const childSection = `
         <p style="display:none" id=${item.itemName}_purchased>Purchased</p>
         <section id="item1_buttons">
             <button  onclick="markAsPurchased(${itemName})">Mark as purchased</button>
-            <button id="openPopup" >Edit</button>
+            <button id="openPopup" onclick"showPopUp()">Edit</button>
         </section>
     </section>
 `;
@@ -77,22 +77,25 @@ purchasedParagraph.style.display = "block"
 }
 
 
-const popup = document.getElementById("popup");
   const openPopup = document.getElementById("openPopup");
   const closePopup = document.getElementById("closePopup");
 
   // Open the popup
-  openPopup.addEventListener("click", () => {
+function showPopup(){
+   const popup = document.getElementById("popup");
     popup.style.display = "flex";
-  });
+}
 
-  // Close the popup
-  closePopup.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
+function hidePopup(){
+   const popup = document.getElementById("popup");
+   popup.style.display = "none";
+}
+
 
   // Close the popup when clicking outside of it
   window.addEventListener("click", (event) => {
+   const popup = document.getElementById("popup");
+
     if (event.target === popup) {
       popup.style.display = "none";
     }
