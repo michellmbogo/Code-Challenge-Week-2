@@ -13,7 +13,7 @@ document.querySelector("#add-button").addEventListener("click", (e) => {
     // Preven duplicates
     const itemExists = itemsList.find((_item) => _item.itemName === itemName);
 
-    if(itemExists){
+    if (itemExists) {
         alert("This item exists");
         return
     }
@@ -64,7 +64,7 @@ document.querySelector("#clear-button").addEventListener("click", (e) => {
 
 // Mark item as purchased
 function markAsPurchased(itemName) {
-    
+
     const itemEl = itemName;
     const name = itemEl.id;
 
@@ -94,7 +94,7 @@ function showPopup(itemName) {
     const itemIndex = itemsList.findIndex((_item) => _item.itemName === name)
     let itemObject = itemsList[itemIndex];
 
-itemToEditIndex = itemIndex;
+    itemToEditIndex = itemIndex;
 
     // Set the inputs values
     const editItemName = document.getElementById("edit_itemName")
@@ -139,15 +139,15 @@ form.addEventListener("submit", (event) => {
     itemsList[itemToEditIndex] = { itemName, quantity, purchased }
 
 
-   // Update the item DOM
-   const itemNameP = document.getElementById(`itemNameP${itemToEdit.itemName}`);
-   itemNameP.innerHTML = `Item name : ${itemName}`;
+    // Update the item DOM
+    const itemNameP = document.getElementById(`itemNameP${itemToEdit.itemName}`);
+    itemNameP.innerHTML = `Item name : ${itemName}`;
 
-   const itemQuantityP = document.getElementById(`itemQuantityP${itemToEdit.itemName}`);
-   itemQuantityP.innerHTML = `Item quantity : ${quantity}`;
+    const itemQuantityP = document.getElementById(`itemQuantityP${itemToEdit.itemName}`);
+    itemQuantityP.innerHTML = `Item quantity : ${quantity}`;
 
-   const itemPurchasedP = document.getElementById(`itemPurchasedP${itemToEdit.itemName}`);
-   itemPurchasedP.innerHTML = `${purchased ? 'Purschased' : ''}`;
+    const itemPurchasedP = document.getElementById(`itemPurchasedP${itemToEdit.itemName}`);
+    itemPurchasedP.innerHTML = `${purchased ? 'Purschased' : ''}`;
 
 
     // Close the popup after saving

@@ -1,82 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Shopping List</title>
-        <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
-        <header>
-            <nav id ="nav-title">
-                <div>
-                    <img
-                    src="./images/white_shopping_cart.jpg"
-                    class="nav-image"
-                    />
-                   </div>
-                <h1>Shopping List</h1>
-              
-            </nav>
-        </header>
-        <main>
-            <section id="item-name">
-             <h2 class="title">Add item</h2>
+
+<head>
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header>
+        <nav id="nav-title">
+            <div>
+                <img src="./images/white_shopping_cart.jpg" class="nav-image" />
+            </div>
+            <h1>Shopping List</h1>
+
+        </nav>
+    </header>
+    <main>
+        <section id="item-name">
+            <h2 class="title">Add item</h2>
             <form id="items_form">
-                <input
-                type="text"
-                name="item"
-                id="name"
-                placeholder="Enter Item Name"
-                />
-                <input
-                type="number"
-                name="quantity"
-                id="quantity"
-                placeholder="Qty"
-                />
+                <input type="text" name="item" id="name" placeholder="Enter Item Name" />
+                <input type="number" name="quantity" id="quantity" placeholder="Qty" />
                 <button type="submit" id="add-button">Add</button>
             </form>
-            </section>
+        </section>
 
-            <section id="items">
-                <section id="clear-item">
+        <section id="items">
+            <section id="clear-item">
                 <h2 class="title">Items List</h2>
-                </section>
-                
-
-                <section id="items-container">
-                </section>
-                <button type="Submit" id="clear-button" >Clear list</button>
             </section>
 
-                <div id="popup" class="modal">
-                    <div class="modal-content">
-                      <span class="close" id="closePopup" onclick="hidePopup()">&times;</span>
-                      <h3>Add Item</h3>
-                      <form id="itemForm">
-                        <div class="form-group">
-                          <label for="itemName">Item Name:</label>
-                          <input type="text" id="edit_itemName" name="itemName" required>
-                        </div>
-                        <div class="form-group">
-                          <label for="quantity">Quantity:</label>
-                          <input type="number" id="edit_quantity" name="quantity" required>
-                        </div>
-                        <div class="form-group switch">
-                          <label for="purchased">Purchased:</label>
-                          <input type="checkbox" id="edit_purchased" name="purchased"  />
-                        </div>
-                        <button type="submit" class="save-btn">Save</button>
-                      </form>
+
+            <section id="items-container">
+            </section>
+            <button type="Submit" id="clear-button">Clear list</button>
+        </section>
+
+        <div id="popup" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closePopup" onclick="hidePopup()">&times;</span>
+                <h3>Add Item</h3>
+                <form id="itemForm">
+                    <div class="form-group">
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="edit_itemName" name="itemName" required>
                     </div>
-                  </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="edit_quantity" name="quantity" required>
+                    </div>
+                    <div class="form-group switch">
+                        <label for="purchased">Purchased:</label>
+                        <input type="checkbox" id="edit_purchased" name="purchased" />
+                    </div>
+                    <button type="submit" class="save-btn">Save</button>
+                </form>
+            </div>
+        </div>
 
 
-        </main>
-        <footer id="footer">
-            <p>&copy; 2024 by Michell Mbogo. All rights reserved</p>
-        </footer>
-        <script src="index.js"></script>
-    </body>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2024 by Michell Mbogo. All rights reserved</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
 
 
 </html>
