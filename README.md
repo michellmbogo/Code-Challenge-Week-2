@@ -7,7 +7,7 @@ The Shopping List Website is a user-friendly platform designed to help users eff
 
 -Adds items to a list
 
--Add quantitiy of item to a list
+-Adds quantity of item to a list
 
 -Marks Items as purchased
 
