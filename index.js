@@ -34,7 +34,7 @@ document.querySelector("#add-button").addEventListener("click", (e) => {
     <section id=${item.itemName}>
         <p id=itemNameP${itemName}>Item name : ${item.itemName}</p>
         <p id=itemQuantityP${itemName}>Quantity : ${item.quantity}</p>
-        <p style="display:none" id="itemPurchasedP${item.itemName}">Purchased</p>
+        <p id="itemPurchasedP${item.itemName}">Purchased</p>
         <section id="item1_buttons">
             <button  onclick="markAsPurchased(${itemName})">Mark as purchased</button>
             <button  onclick="showPopup(${itemName})">Edit</button>
@@ -78,7 +78,7 @@ function markAsPurchased(itemName) {
     //Show the purchased text
     const purchasedTextId = `itemPurchasedP${name}`
     const purchasedParagraph = document.getElementById(purchasedTextId);
-    purchasedParagraph.style.display = "block"
+    purchasedParagraph.style.textDecoration = "line-through"
 }
 
 
