@@ -48,7 +48,13 @@
 row-gap: 20px;
 width: 50%;
 margin-top: 100px;
-background-color: red
+background-color: red;
+row-gap: 20px;
+width: 50%;
+justify-content: center;
+
+
+
 }
 
 
